@@ -3,7 +3,7 @@ import ProgressBar from "./ProgressBar";
 
 const About = () => {
   return (
-    <section className="dark:bg-[#222632]/20 ">
+    <section className="dark:bg-[#222632]/20  bg-[#f0f0f0]/15">
       <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-0">
         <div className="w-full">
           <Image
@@ -16,12 +16,12 @@ const About = () => {
         <div className="p-6 py-5 ">
           <div className="">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-1 bg-[#1966D2]"></div>
-              <span className="text-sm text-[#1966D2] uppercase font-semibold ">
+              <div className="w-10 h-1 bg-[#023E8A]"></div>
+              <span className="text-sm text-[#023E8A] uppercase font-semibold ">
                 Learn More About Me
               </span>
             </div>
-            <p className="text-lg mb-4 text-neutral-600 dark:text-gray-300 font-normal">
+            <p className="text-lg mb-4 text-neutral-600 dark:text-amber-50 font-normal">
               A certified and professional Node Js Software Developer.
             </p>
           </div>
@@ -37,7 +37,7 @@ const About = () => {
           <ProgressBar skill="MySQL" level={80} />
           <ProgressBar skill="PHP" level={80} />
           <ProgressBar skill="WordPress" level={100} />
-          <button className=" p-3 px-7 bg-[#1966D2] hover:bg-transparent border-2 border-[#1966D2] hover:text-[#1966D2] dark:hover:text-white text-white rounded">
+          <button className=" p-3 px-7 bg-[#023E8A] hover:bg-transparent border-2 border-[#023E8A] hover:text-[#023E8A] dark:hover:text-amber-50 text-amber-50 rounded transition-colors duration-300 cursor-pointer mt-4">
             Learn More
           </button>
         </div>

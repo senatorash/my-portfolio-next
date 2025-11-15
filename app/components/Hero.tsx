@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import HeroTyping from "./UI/HeroTyping";
 
 const Hero = () => {
@@ -9,15 +10,20 @@ const Hero = () => {
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
           Ashimi Seide
         </h2>
-        <div className="text-3xl mt-4 mb-8">
+        <div className="text-3xl font-semibold text-[#023E8A] mt-4 mb-8">
           <HeroTyping />
         </div>
+
         <div className="flex gap-4">
-          <button className="btn">Hire Me</button>
-          <button className="btn-outline">Contact Me</button>
+          <Link href="www.google.com" className="btn">
+            Hire Me
+          </Link>
+          <Link href="www.example.com/contact" className="btn-outline">
+            Contact Me
+          </Link>
         </div>
       </div>
-      <div className="hidden md:flex rounded-lg border-2 border-[#1966D2] items-center justify-center  w-100 mx-auto ">
+      <div className="hidden md:flex rounded-lg border-2 border-[#023E8A] items-center justify-center  w-100 mx-auto ">
         <Image
           src="/my-pic.png"
           alt="ashimi_seide"

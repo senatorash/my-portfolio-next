@@ -4,10 +4,23 @@
 
 @layer components {
   .btn {
-    @apply border-[#1966D2] bg-[#1966D2] text-amber-50 hover:bg-transparent hover:text-black dark:border-amber-50 dark:bg-amber-50 hover:dark:text-amber-50 dark:text-black p-3 px-7 rounded cursor-pointer dark:hover:bg-transparent border-2 transition-colors duration-300;
+    @apply border-[#023E8A] bg-[#023E8A] text-amber-50 hover:bg-transparent hover:text-black dark:border-amber-50 dark:bg-amber-50 hover:dark:text-amber-50 dark:text-black p-3 px-7 rounded cursor-pointer dark:hover:bg-transparent border-2 transition-colors duration-300;
   }
   .btn-outline {
-    @apply hover:bg-[#1966D2] hover:text-amber-50 border-2 border-[#1966D2] dark:border-amber-50 p-3 px-5 rounded dark:hover:bg-amber-50 dark:hover:text-black transition-colors duration-300 cursor-pointer;
+    @apply hover:bg-[#023E8A] hover:text-amber-50 border-2 border-[#023E8A] dark:border-amber-50 p-3 px-5 rounded dark:hover:bg-amber-50 dark:hover:text-black transition-colors duration-300 cursor-pointer;
+  }
+  .text-shadow-indigo {
+    text-shadow: 4px 4px 8px rgba(79, 70, 229, 0.8); /* indigo-600 shadow */
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  .animate-spin-slower {
+    animation: spin 5s linear infinite;
   }
 }
 

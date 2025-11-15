@@ -9,17 +9,22 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between p-2 px-5 mb-10 md:px-10">
-      <div className="dark:bg-amber-50 rounded-2xl bg-white p-1">
-        <Image
-          src="/senate.png"
-          alt="ashimi_logo"
-          width={30}
-          height={50}
-        ></Image>
-      </div>
+      <Link href="/">
+        <div className="dark:bg-amber-50 rounded-2xl bg-white p-1 animate-spin-slow">
+          <Image
+            src="/senate.png"
+            alt="ashimi_logo"
+            width={30}
+            height={50}
+          ></Image>
+        </div>
+      </Link>
       <DarkModeSwitch />
       <div className="hidden md:flex">
         <ul className="flex gap-8 font-medium text-sm items-center">
+          <li className="hover:text-[#1966D2]">
+            <Link href="/about">About</Link>
+          </li>
           <li className="hover:text-[#1966D2]">
             <Link href="/about">Resume</Link>
           </li>
@@ -54,6 +59,9 @@ const Header = () => {
         >
           {isMenuOpen && <FiX size={28} color="white" />}
         </button>
+        <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+          About
+        </Link>
         <Link href="/about" onClick={() => setIsMenuOpen(false)}>
           Resume
         </Link>

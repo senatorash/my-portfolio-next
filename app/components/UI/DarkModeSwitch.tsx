@@ -8,9 +8,6 @@ const DarkModeSwitch = () => {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   const toggleTheme = () => {
@@ -20,6 +17,14 @@ const DarkModeSwitch = () => {
       setTheme("dark");
     }
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
