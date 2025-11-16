@@ -26,24 +26,28 @@ const About = () => {
               A certified and professional Node Js Software Developer.
             </p>
           </div>
-          <ProgressBar skill="HTML" level={100} />
-          <ProgressBar skill="CSS / Bootstrap 5" level={100} />
-          <ProgressBar skill="Tailwind CSS" level={90} />
-          <ProgressBar skill="JavaScript" level={80} />
-          <ProgressBar skill="TypeScript" level={75} />
-          <ProgressBar skill="React Js" level={80} />
-          <ProgressBar skill="Next Js" level={80} />
-          <ProgressBar skill="Node.js" level={90} />
-          <ProgressBar skill="MongoDB" level={90} />
-          <ProgressBar skill="MySQL" level={80} />
-          <ProgressBar skill="PHP" level={80} />
-          <ProgressBar skill="WordPress" level={100} />
-          <Link
-            href="#resume"
-            className=" p-3 px-7 bg-[#023E8A] hover:bg-transparent border-2 border-[#023E8A] hover:text-[#023E8A] dark:hover:text-amber-50 text-amber-50 rounded transition-colors duration-300 cursor-pointer mt-4"
-          >
-            Learn More
-          </Link>
+          <div>
+            <ProgressBar skill="HTML" level={100} />
+            <ProgressBar skill="CSS / Bootstrap 5" level={100} />
+            <ProgressBar skill="Tailwind CSS" level={90} />
+            <ProgressBar skill="JavaScript" level={80} />
+            <ProgressBar skill="TypeScript" level={75} />
+            <ProgressBar skill="React Js" level={80} />
+            <ProgressBar skill="Next Js" level={80} />
+            <ProgressBar skill="Node.js" level={90} />
+            <ProgressBar skill="MongoDB" level={90} />
+            <ProgressBar skill="MySQL" level={80} />
+            <ProgressBar skill="PHP" level={80} />
+            <ProgressBar skill="WordPress" level={100} />
+          </div>
+          <div className="mt-10">
+            <Link
+              href="#resume"
+              className=" p-3 px-7 bg-[#023E8A] hover:bg-transparent border-2 border-[#023E8A] hover:text-[#023E8A] dark:hover:text-amber-50 text-amber-50 rounded transition-colors duration-300 cursor-pointer mt-4"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
     </section>

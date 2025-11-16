@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -7,8 +8,31 @@ import DarkModeSwitch from "./UI/DarkModeSwitch";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 245) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="flex items-center justify-between p-2 px-5 mb-10 md:px-10">
+    <nav
+      className={`${
+        sticky
+          ? "fixed top-0 left-0 w-full z-50 shadow-md bg-neutral-300 dark:bg-[#0C1017] transition-shadow"
+          : ""
+      } flex items-center justify-between p-2 px-5 mb-10 md:px-10 transition-all duration-500 ease-in-out`}
+    >
       <Link href="/">
         <div className="dark:bg-amber-50 rounded-2xl bg-white p-1 animate-spin-slow">
           <Image
