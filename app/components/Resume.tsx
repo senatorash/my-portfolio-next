@@ -29,7 +29,7 @@ const Resume = () => {
             <span className="w-full h-0.5  bg-amber-50 dark:bg-[#1966D2]"></span>
           </h2>
           <p className="text-amber-50 leading-relaxed">
-            Node JS, Express, MongoDB, Next.js, React Native, Spring Boot
+            Java, Spring Boot, C#, .NET, React Native,
           </p>
         </div>
 
