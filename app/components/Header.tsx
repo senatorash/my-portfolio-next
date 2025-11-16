@@ -23,16 +23,16 @@ const Header = () => {
       <div className="hidden md:flex">
         <ul className="flex gap-8 font-medium text-sm items-center">
           <li className="hover:text-[#1966D2]">
-            <Link href="/about">About</Link>
+            <Link href="#about">About</Link>
           </li>
           <li className="hover:text-[#1966D2]">
-            <Link href="/about">Resume</Link>
+            <Link href="#resume">Resume</Link>
           </li>
           <li className="hover:text-[#1966D2]">
-            <Link href="/about">Work</Link>
+            <Link href="#project">Project</Link>
           </li>
           <li className="hover:text-[#1966D2]">
-            <Link href="/about">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
       </div>
@@ -59,17 +59,17 @@ const Header = () => {
         >
           {isMenuOpen && <FiX size={28} color="white" />}
         </button>
-        <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+        <Link href="#about" onClick={() => setIsMenuOpen(false)}>
           About
         </Link>
-        <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+        <Link href="#resume" onClick={() => setIsMenuOpen(false)}>
           Resume
         </Link>
-        <Link href="/work" onClick={() => setIsMenuOpen(false)}>
-          Work
+        <Link href="#project" onClick={() => setIsMenuOpen(false)}>
+          Project
         </Link>
 
-        <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+        <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
           Contact
         </Link>
       </div>

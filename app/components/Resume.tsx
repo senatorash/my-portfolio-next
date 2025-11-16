@@ -4,7 +4,7 @@ import { experienceData } from "./ResumeData";
 
 const Resume = () => {
   return (
-    <section className="py-16 px-6 md:px-16 space-y-14 my-24">
+    <section className="py-16 px-6 md:px-16 space-y-14 my-24" id="resume">
       <h2 className="text-center text-4xl font-bold dark:[text-shadow:2px_2px_4px_#1966D2] [text-shadow:2px_2px_4px_#000000] mb-10 text-[#023E8A] dark:text-amber-50">
         RESUME
       </h2>
@@ -93,7 +93,7 @@ const Resume = () => {
           <div>
             <h2 className="text-amber-50 mb-2">
               Click{" "}
-              <Link href="/projects" className="text-[#1966D2]">
+              <Link href="#project" className="text-[#1966D2]">
                 here
               </Link>{" "}
               to view my projects
@@ -103,7 +103,10 @@ const Resume = () => {
 
         <div className="">
           <Link
-            href=""
+            href="https://drive.google.com/uc?export=download&id=1Bs--GhzRpIn4rtSmQhcexg0K8AvAChCO"
+            target="__blank"
+            rel="noopener noreferrer"
+            download="Ashimi_Seide_Resume.pdf"
             className="text-amber-50 flex items-center gap-3 cursor-pointer hover:text-[#1966D2] w-max mx-auto"
           >
             <FaDownload /> <span>Download Resume</span>

@@ -5,7 +5,10 @@ import Link from "next/link";
 
 const Project = () => {
   return (
-    <section className="py-16 px-20 md:px-16 space-y-14 my-24 dark:bg-[#222632]/50 bg-[#f0f0f0]/23 rounded-lg">
+    <section
+      className="py-16 px-20 md:px-16 space-y-14 my-24 dark:bg-[#222632]/50 bg-[#f0f0f0]/23 rounded-lg"
+      id="project"
+    >
       <h2 className="text-center text-4xl font-bold dark:[text-shadow:2px_2px_4px_#1966D2] [text-shadow:2px_2px_4px_#000000] mb-10 text-[#023E8A] dark:text-amber-50 uppercase">
         Projects
       </h2>

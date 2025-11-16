@@ -31,7 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.className} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${montserrat.className} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${montserrat.variable} font-montserrat antialiased`}

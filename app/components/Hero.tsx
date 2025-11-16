@@ -15,10 +15,10 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-4">
-          <Link href="www.google.com" className="btn">
+          <Link href="#contact" className="btn">
             Hire Me
           </Link>
-          <Link href="www.example.com/contact" className="btn-outline">
+          <Link href="#contact" className="btn-outline">
             Contact Me
           </Link>
         </div>

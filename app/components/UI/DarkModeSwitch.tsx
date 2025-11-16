@@ -28,7 +28,7 @@ const DarkModeSwitch = () => {
 
   return (
     <button
-      className="cursor-pointer  hover:bg-[#1966D2] hover:text-white rounded-full p-3"
+      className="cursor-pointer  hover:bg-[#023E8A] hover:text-white rounded-full p-3"
       onClick={toggleTheme}
     >
       {mounted && currentTheme === "dark" ? (
