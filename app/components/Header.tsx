@@ -34,10 +34,11 @@ const Header = () => {
       } flex items-center justify-between p-2 px-5 mb-10 md:px-10 transition-all duration-500 ease-in-out`}
     >
       <Link href="/">
-        <div className="dark:bg-amber-50 rounded-2xl bg-white p-1 animate-spin-slow">
+        <div className="dark:bg-amber-50 rounded-2xl bg-white p-1 x">
           <Image
             src="/senate.png"
             alt="ashimi_logo"
+            className="animate-spin-slow"
             width={30}
             height={50}
           ></Image>
