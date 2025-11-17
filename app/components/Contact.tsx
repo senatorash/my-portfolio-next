@@ -55,7 +55,7 @@ const Contact = () => {
         >
           <FaGithub
             size={30}
-            className="mx-4 inline-block text-[#1966D2] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
+            className="mx-4 inline-block text-[#023E8A] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
           />
         </Link>
         <Link
@@ -65,7 +65,7 @@ const Contact = () => {
         >
           <FaLinkedinIn
             size={30}
-            className="mx-4 inline-block text-[#1966D2] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
+            className="mx-4 inline-block text-[#023E8A] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
           />
         </Link>
         <Link
@@ -75,7 +75,7 @@ const Contact = () => {
         >
           <FaWhatsapp
             size={30}
-            className="mx-4 inline-block text-[#1966D2] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
+            className="mx-4 inline-block text-[#023E8A] hover:text-black dark:hover:text-amber-50 shadow-2xl cursor-pointer"
           />
         </Link>
       </div>
