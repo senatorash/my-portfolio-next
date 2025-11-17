@@ -49,7 +49,7 @@ const Contact = () => {
             Connect with me
           </h3> */}
         <Link
-          href="https://github.com/your-github-username"
+          href="https://github.com/senatorash"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -59,7 +59,7 @@ const Contact = () => {
           />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/your-linkedin-username"
+          href="https://linkedin.com/in/ashimi-seide-96797a289"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -69,7 +69,7 @@ const Contact = () => {
           />
         </Link>
         <Link
-          href="https://wa.me/your-whatsapp-number"
+          href="https://wa.me/2349076275708"
           target="_blank"
           rel="noopener noreferrer"
         >
