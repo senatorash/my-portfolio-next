@@ -24,6 +24,7 @@ const Contact = () => {
     };
 
     const result = await formSubmit(formData);
+    console.log("Form submission result:", result);
     if (result?.success === "true") {
       setIsSuccess(result.message);
       setName("");
