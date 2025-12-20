@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { formSubmit } from "../lib/apis/formSubmit";
 import Success from "./common/Success";
 
@@ -24,7 +24,6 @@ const Contact = () => {
     };
 
     const result = await formSubmit(formData);
-    console.log("Form submission result:", result);
     if (result?.success === "true") {
       setIsSuccess(result.message);
       setName("");
@@ -34,6 +33,15 @@ const Contact = () => {
     }
     return result;
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      const timer = setTimeout(() => {
+        setIsSuccess("");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSuccess]);
   return (
     <section className="py-16 px-10 md:px-20 space-y-14 my-24" id="contact">
       <h2 className="text-center text-4xl font-bold dark:[text-shadow:2px_2px_4px_#1966D2] [text-shadow:2px_2px_4px_#000000] mb-10 text-[#023E8A] dark:text-amber-50">

@@ -5,8 +5,7 @@ interface ContactFormData {
 }
 
 export const formSubmit = async (formData: ContactFormData) => {
-  const url = process.env.API_KEY;
-  console.log("API URL:", url);
+  const url = process.env.NEXT_PUBLIC_API_KEY;
   try {
     const response = await fetch(url as string, {
       method: "POST",
