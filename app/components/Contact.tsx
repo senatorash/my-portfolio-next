@@ -44,7 +44,7 @@ const Contact = () => {
         className="max-w-md mx-auto flex flex-col gap-5"
         onSubmit={handleSubmit}
       >
-        <Success errorMessage={isSuccess} />
+        {isSuccess && <Success errorMessage={isSuccess} />}
         <div>
           {" "}
           <label className="block text-sm font-medium mb-3">Name*</label>
