@@ -75,4 +75,13 @@ export const projects = [
     link: "https://mc-celebrity.vercel.app/",
     code: "https://github.com/senatorash/mc-celebrity",
   },
+  {
+    id: 4,
+    name: "Meta Ads Scraper",
+    stack: "Node.js, Puppeteer, Typescript",
+    description:
+      "A web scraper that extracts ads data from Meta Ads Library using Puppeteer.",
+    link: "https://github.com/senatorash/meta-ads-scraper",
+    code: "https://github.com/senatorash/meta-ads-scraper",
+  },
 ];

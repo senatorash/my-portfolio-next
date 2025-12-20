@@ -1,6 +1,6 @@
 import { FaSignal } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
-import { projects } from "./ResumeData";
+import { projects } from "./Resume/ResumeData";
 import Link from "next/link";
 
 const Project = () => {
