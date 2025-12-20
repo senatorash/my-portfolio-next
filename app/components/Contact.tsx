@@ -29,6 +29,7 @@ const Contact = () => {
       setName("");
       setEmail("");
       setMessage("");
+      alert("Message sent successfully!");
     } else {
     }
     return result;
