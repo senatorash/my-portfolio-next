@@ -13,6 +13,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState("");
+  const [isError, setIsError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,15 +25,15 @@ const Contact = () => {
     };
 
     const result = await formSubmit(formData);
-    console.log("Form submission result:", result);
     if (result?.success === "true") {
       setIsSuccess(result.message);
       setName("");
       setEmail("");
       setMessage("");
-      alert("Message sent successfully!");
     } else {
+      setIsError("Failed to send message. Please try again.");
     }
+
     return result;
   };
 
