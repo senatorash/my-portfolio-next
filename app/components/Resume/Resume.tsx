@@ -29,7 +29,7 @@ const Resume = () => {
             <span className="w-full h-0.5  bg-amber-50 dark:bg-[#1966D2]"></span>
           </h2>
           <p className="text-amber-50 leading-relaxed">
-            Java, Spring Boot, C#, .NET, React Native,
+            C#, .NET, React Native,
           </p>
         </div>
 
@@ -103,7 +103,7 @@ const Resume = () => {
 
         <div className="">
           <Link
-            href="https://drive.google.com/uc?export=download&id=1zHWfh_opDbt_tUTrZibDUNfCTvMo2WaY"
+            href="https://drive.google.com/uc?export=download&id=1JORrAEfWJFxgUc7HvBXeOcjSZFm5nf7a"
             target="__blank"
             rel="noopener noreferrer"
             download="Ashimi_Seide_Resume.pdf"

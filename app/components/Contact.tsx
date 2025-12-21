@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { formSubmit } from "../lib/apis/formSubmit";
 import Success from "./common/Success";
+import Error from "./common/Error";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -14,37 +15,46 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState("");
   const [isError, setIsError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const formData = {
       name,
       email,
       message,
     };
-
-    const result = await formSubmit(formData);
-    if (result?.success === "true") {
-      setIsSuccess(result.message);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      setIsError("Failed to send message. Please try again.");
+    try {
+      const result = await formSubmit(formData);
+      if (result?.success === "true") {
+        setIsSuccess(result?.message);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setIsLoading(false);
+      } else {
+        setIsError("Failed to send message. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      setIsError("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false);
     }
-
-    return result;
   };
 
   useEffect(() => {
-    if (isSuccess) {
+    if (isSuccess || isError) {
       const timer = setTimeout(() => {
         setIsSuccess("");
-      }, 3000);
+        setIsError("");
+      }, 7000);
       return () => clearTimeout(timer);
     }
-  }, [isSuccess]);
+  }, [isSuccess, isError]);
+
   return (
     <section className="py-16 px-10 md:px-20 space-y-14 my-24" id="contact">
       <h2 className="text-center text-4xl font-bold dark:[text-shadow:2px_2px_4px_#1966D2] [text-shadow:2px_2px_4px_#000000] mb-10 text-[#023E8A] dark:text-amber-50">
@@ -55,7 +65,9 @@ const Contact = () => {
         className="max-w-md mx-auto flex flex-col gap-5"
         onSubmit={handleSubmit}
       >
-        {isSuccess && <Success errorMessage={isSuccess} />}
+        {isSuccess && <Success successMessage={isSuccess} />}
+        {isError && <Error errorMessage={isError} />}
+
         <div>
           {" "}
           <label className="block text-sm font-medium mb-3">Name*</label>
@@ -96,7 +108,7 @@ const Contact = () => {
           type="submit"
           className="p-3 px-7 bg-[#023E8A] hover:bg-transparent border-2 border-[#023E8A] hover:text-[#023E8A] dark:hover:text-amber-50 text-amber-50 rounded transition-colors duration-300 cursor-pointer mt-4"
         >
-          Send Message
+          {isLoading ? "Please wait..." : "Send Message"}
         </button>
       </form>
       <div className="text-center">
