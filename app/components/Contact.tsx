@@ -8,31 +8,37 @@ import { useState, useEffect } from "react";
 import { formSubmit } from "../lib/apis/formSubmit";
 import Success from "./common/Success";
 import Error from "./common/Error";
+import useFormValidation from "../hooks/useFormValidation";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState("");
   const [isError, setIsError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { values, errors, handleChange, validate, resetForm } =
+    useFormValidation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
+    // validate form before submission
+    const isValid = validate();
+    if (!isValid) {
+      setIsLoading(false);
+      return;
+    }
+
     const formData = {
-      name,
-      email,
-      message,
+      name: values.name,
+      email: values.email,
+      message: values.message,
     };
     try {
+      // submit form data to the API
       const result = await formSubmit(formData);
       if (result?.success === "true") {
         setIsSuccess(result?.message);
-        setName("");
-        setEmail("");
-        setMessage("");
+        resetForm();
         setIsLoading(false);
       } else {
         setIsError("Failed to send message. Please try again.");
@@ -76,21 +82,27 @@ const Contact = () => {
             placeholder="Your Name"
             className="w-full border px-4 py-4 dark:bg-[#222632] bg-[#faf9f6] border-none focus:border-[#023E8A] focus:ring-2 focus:ring-[#023E8A] text-[#1966D2] font-semibold placeholder:font-normal placeholder:text-neutral-500 rounded outline-none"
             name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={values.name}
+            onChange={(e) => handleChange("name", e.target.value)}
           />
+          {errors.name && (
+            <p className="text-red-700 text-sm">{errors.name[0]}</p>
+          )}
         </div>
         <div>
           {" "}
           <label className="block text-sm font-medium mb-3">Email*</label>
           <input
-            type="email"
+            type="text"
             placeholder="Your Email Address"
             className="w-full border px-4 py-4 dark:bg-[#222632] bg-[#faf9f6]  border-none focus:border-[#023E8A] focus:ring-2 focus:ring-[#023E8A] text-[#1966D2] font-semibold placeholder:font-normal placeholder:text-neutral-500 rounded outline-none"
             name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={values.email}
+            onChange={(e) => handleChange("email", e.target.value)}
           />
+          {errors.email && (
+            <p className="text-red-700 text-sm">{errors.email[0]}</p>
+          )}
         </div>
         <div>
           {" "}
@@ -100,9 +112,12 @@ const Contact = () => {
             rows={4}
             className="w-full border px-4 py-4 dark:bg-[#222632] bg-[#faf9f6] border-none focus:border-[#023E8A] focus:ring-2 focus:ring-[#023E8A] text-[#1966D2] font-semibold placeholder:font-normal placeholder:text-neutral-500 rounded outline-none"
             name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={values.message}
+            onChange={(e) => handleChange("message", e.target.value)}
           />
+          {errors.message && (
+            <p className="text-red-700 text-sm">{errors.message[0]}</p>
+          )}
         </div>
         <button
           type="submit"

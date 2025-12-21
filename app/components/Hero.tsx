@@ -4,7 +4,7 @@ import HeroTyping from "./UI/HeroTyping";
 
 const Hero = () => {
   return (
-    <div className="grid md:grid-cols-2 items-center px-10 min-h-120 md:min-h-screen">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center px-10 min-h-120 md:min-h-screen">
       <div className="flex flex-col text-center md:text-left items-center md:items-start">
         <span>I'M</span>
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
