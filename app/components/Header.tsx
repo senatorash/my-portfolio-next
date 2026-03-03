@@ -44,9 +44,12 @@ const Header = () => {
           ></Image>
         </div>
       </Link>
-      <DarkModeSwitch />
+
       <div className="hidden md:flex">
         <ul className="flex gap-8 font-medium text-sm items-center">
+          <li>
+            <DarkModeSwitch />
+          </li>
           <li className="hover:text-[#1966D2]">
             <Link href="#about">About</Link>
           </li>
@@ -64,13 +67,16 @@ const Header = () => {
 
       {/* Hamburger Menu */}
 
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="cursor-pointer md:hidden focus:outline-none"
-      >
-        {/* {isMenuOpen &&} */}
-        <FiMenu size={24} />
-      </button>
+      <div className="md:hidden flex items-center gap-2">
+        <DarkModeSwitch />
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="cursor-pointer  focus:outline-none"
+        >
+          {/* {isMenuOpen &&} */}
+          <FiMenu size={24} />
+        </button>
+      </div>
 
       {/* Mobile */}
       <div

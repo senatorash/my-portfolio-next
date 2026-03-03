@@ -15,10 +15,6 @@ export const formSubmit = async (formData: ContactFormData) => {
       body: JSON.stringify(formData),
     });
     const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || "Something went wrong!");
-    }
     return data;
   } catch (error) {
     throw error;

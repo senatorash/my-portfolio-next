@@ -17,13 +17,13 @@ const Resume = () => {
           </h2>
           <p className="text-amber-50 leading-6 lg:leading-7 text-sm md:text-base">
             HTML, CSS/SASS, Tailwind CSS, CSS Frameworks, JavaScript, React JS,
-            Redux, TypeScript, Next JS, Node JS, Express JS, MongoDB, mySQL,
-            Git, GitHub, WordPress, PHP.
+            Redux, ReduxToolkits, TypeScript, Next JS, Node JS, Express JS,
+            MongoDB, mySQL, postgreSQL, Git, GitHub, WordPress, PHP.
           </p>
         </div>
 
         {/* Section: Interests */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-[#1966D2] text-lg font-bold mb-4 flex items-center gap-3">
             Interests
             <span className="w-full h-0.5  bg-amber-50 dark:bg-[#1966D2]"></span>
@@ -31,10 +31,9 @@ const Resume = () => {
           <p className="text-amber-50 leading-relaxed">
             C#, .NET, React Native,
           </p>
-        </div>
+        </div> */}
 
         <div className="mb-8">
-          {" "}
           <h2 className="text-[#1966D2] text-lg font-bold mb-4 flex items-center gap-3">
             Experience
             <span className="w-full h-0.5  bg-amber-50 dark:bg-[#1966D2]"></span>
@@ -92,10 +91,10 @@ const Resume = () => {
           </h2>
           <div>
             <h2 className="text-amber-50 mb-2">
-              Click{" "}
+              Click
               <Link href="#project" className="text-[#1966D2]">
                 here
-              </Link>{" "}
+              </Link>
               to view my projects
             </h2>
           </div>

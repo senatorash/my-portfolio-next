@@ -1,6 +1,18 @@
 export const experienceData = [
   {
     id: 1,
+    company: "Freelance",
+    role: "Software Developer",
+    duration: "2025 - Present",
+    responsibilities: [
+      "Engineered custom, responsive websites and landing pages using modern frontend technologies, improving client engagement by 30% and strengthening online presence for small businesses and healthcare professionals,",
+      "Optimized performance through asset compression, lazy loading, and efficient component structuring, consistently achieving 2 second load times and improved SEO rankings.",
+      "Ensured every project aligned with client branding, contributing to consistent user experience and up to 25% higher conversion rates on targeted landing pages",
+    ],
+  },
+
+  {
+    id: 2,
     company: "Flour Mills of Nigeria FZE",
     role: "Information Technology Technical Support",
     duration: "JANUARY 2025 - NOVEMBER 2025",
@@ -12,7 +24,7 @@ export const experienceData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: "Gomycode Nigeria",
     role: "Full Stack Developer Intern",
     duration: "MARCH 2024 - OCTOBER 2024",
@@ -20,17 +32,6 @@ export const experienceData = [
       "Built and developed full-stack web applications using React.js, Node.js, Express, and MongoDB, focusing on performance and real-world functionality.",
       "Collaborated in Agile sprints, Participated in hackathons, and contributed to team based projects through Git/Github, peer reviews, and daily stand ups.",
       "Designed responsive user interfaces and RESTful APIs, improving project delivery speed and user experience across multiple platforms.",
-    ],
-  },
-  {
-    id: 3,
-    company: "Freelance",
-    role: "Web Developer",
-    duration: "2024 - Present",
-    responsibilities: [
-      "Developed custom websites and landing pages for small businesses and mental professionals,resulting in an average 30% increase in client engagement and enhanced brand visibility,",
-      "Implemented responsive design and performance optimization strategies, achieving under 3 second load times and semless functionality across devices and browsers.",
-      "Ensured every project aligned with client branding, contributing to consistent user experience and up to 25% higher conversion rates on targeted landing pages",
     ],
   },
 ];
@@ -48,6 +49,23 @@ const Interests = [{}];
 export const projects = [
   {
     id: 1,
+    name: "Bluecrest Attorneys",
+    stack: "Nextjs, Tailwind CSS",
+    description: "A Law Firm website built with Nextjs and Tailwind CSS.",
+    link: "https://bluecrestattorneys.com/",
+    code: "",
+  },
+  {
+    id: 2,
+    name: "Meta Ads Scraper",
+    stack: "Node.js, Puppeteer, Typescript",
+    description:
+      "A web scraper that extracts ads data from Meta Ads Library using Puppeteer.",
+    link: "https://github.com/senatorash/meta-ads-scraper",
+    code: "https://github.com/senatorash/meta-ads-scraper",
+  },
+  {
+    id: 3,
     name: "Book Reco",
     stack: "React, redux, Node, Express, MongoDB",
     description: "A book recommendation web application",
@@ -57,7 +75,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 4,
     name: "Blog Backend",
     stack: "Node, Express, MongoDB",
     description:
@@ -68,20 +86,11 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     name: "MC Celebrity",
     stack: "React.js",
     description: "Master of ceremonies website",
     link: "https://mc-celebrity.vercel.app/",
     code: "https://github.com/senatorash/mc-celebrity",
-  },
-  {
-    id: 4,
-    name: "Meta Ads Scraper",
-    stack: "Node.js, Puppeteer, Typescript",
-    description:
-      "A web scraper that extracts ads data from Meta Ads Library using Puppeteer.",
-    link: "https://github.com/senatorash/meta-ads-scraper",
-    code: "https://github.com/senatorash/meta-ads-scraper",
   },
 ];
