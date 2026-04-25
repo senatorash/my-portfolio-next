@@ -5,13 +5,14 @@ import Link from "next/link";
 const About = () => {
   return (
     <section className="dark:bg-[#222632]/20  bg-[#f0f0f0]/15" id="about">
-      <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-0">
-        <div className="w-full">
+      <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-0">
+        <div className="w-full mx-auto">
           <Image
             src="/img_ash.jpg"
             alt="Ashimi Seide"
             width={600}
             height={100}
+            className="mx-auto rounded-lg"
           />
         </div>
         <div className="p-6 py-5 ">
