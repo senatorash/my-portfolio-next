@@ -31,14 +31,13 @@ const About = () => {
             <ProgressBar skill="HTML" level={100} />
             <ProgressBar skill="CSS / Bootstrap 5" level={100} />
             <ProgressBar skill="Tailwind CSS" level={90} />
-            <ProgressBar skill="JavaScript" level={80} />
-            <ProgressBar skill="TypeScript" level={75} />
-            <ProgressBar skill="React Js" level={80} />
-            <ProgressBar skill="Next Js" level={80} />
+            <ProgressBar skill="JavaScript" level={90} />
+            <ProgressBar skill="TypeScript" level={90} />
+            <ProgressBar skill="React Js" level={90} />
+            <ProgressBar skill="Next Js" level={90} />
             <ProgressBar skill="Node.js" level={90} />
             <ProgressBar skill="MongoDB" level={90} />
-            <ProgressBar skill="MySQL" level={80} />
-            <ProgressBar skill="PHP" level={80} />
+            <ProgressBar skill="MySQL" level={90} />
             <ProgressBar skill="WordPress" level={100} />
           </div>
           <div className="mt-10">

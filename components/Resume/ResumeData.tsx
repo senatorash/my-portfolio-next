@@ -48,9 +48,25 @@ export const EducationData = [
 const Interests = [{}];
 export const projects = [
   {
+    id: 7,
+    name: "EMR",
+    stack: "MongoDB, Express.js, Next.js, Node.js",
+    description: "",
+    link: "",
+    code: "",
+  },
+  {
+    id: 6,
+    name: "Landing Page for Tobams Group",
+    stack: "Next.js, Tailwind CSS",
+    description: "",
+    link: "https://tobams-six.vercel.app/",
+    code: "",
+  },
+  {
     id: 1,
     name: "Bluecrest Attorneys",
-    stack: "Nextjs, Tailwind CSS",
+    stack: "Next.js, Tailwind CSS",
     description: "A Law Firm website built with Nextjs and Tailwind CSS.",
     link: "https://bluecrestattorneys.com/",
     code: "",
@@ -67,7 +83,7 @@ export const projects = [
   {
     id: 3,
     name: "Book Reco",
-    stack: "React, redux, Node, Express, MongoDB",
+    stack: "React, Node, Express, MongoDB",
     description: "A book recommendation web application",
     // " A web application that suggests books based on user preferences using React for the frontend and Node.js for the backend.",
     link: "https://bookreco.vercel.app/",
