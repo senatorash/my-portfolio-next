@@ -52,8 +52,8 @@ export const projects = [
     name: "Rigobera Solutions Limited",
     stack: "Next.js Sanity CMS",
     description: "A web Application platform for rigobera solutions limited.",
-    link: "https://ashimi.vercel.app/",
-    code: "https://github.com/senatorash/ashimi",
+    link: "https://rigoberasolutions.com",
+    code: "",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const projects = [
     stack: "Next.js, Tailwind CSS",
     description:
       "A website for an engineering company showcasing their services and portfolio.",
-    link: "https://profitech.vercel.app/",
+    link: "https://profitech.com.ng",
     code: "",
   },
   {
