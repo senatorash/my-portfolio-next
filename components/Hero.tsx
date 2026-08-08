@@ -4,7 +4,7 @@ import HeroTyping from "./UI/HeroTyping";
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center px-10 min-h-120 lg:min-h-screen">
+    <section className="flex flex-col lg:flex-row items-center justify-center min-h-100 lg:min-h-screen px-6 md:px-16 py-16 gap-32">
       <div className="flex flex-col text-center md:text-left items-center lg:items-start">
         <span>I'M</span>
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
@@ -23,7 +23,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden md:hidden lg:flex rounded-lg border-2 border-[#023E8A] items-center justify-center  w-100 mx-auto ">
+      <div className="hidden md:hidden lg:flex rounded-lg border-2 border-[#023E8A] items-center justify-center w-100">
         <Image
           src="/my-pic.png"
           alt="ashimi_seide"
@@ -33,7 +33,7 @@ const Hero = () => {
           height={300}
         ></Image>
       </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

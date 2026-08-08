@@ -102,7 +102,7 @@ const Resume = () => {
 
         <div className="">
           <Link
-            href="https://drive.google.com/uc?export=download&id=1JORrAEfWJFxgUc7HvBXeOcjSZFm5nf7a"
+            href="https://drive.google.com/uc?export=download&id=1HG0zT8eqMVHsaP2i5HMf39SE6tP2yV_J"
             target="__blank"
             rel="noopener noreferrer"
             download="Ashimi_Seide_Resume.pdf"
