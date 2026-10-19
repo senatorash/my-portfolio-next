@@ -48,7 +48,7 @@ export const EducationData = [
 const Interests = [{}];
 export const projects = [
   {
-    id: 9,
+    id: 7,
     name: "Rigobera Solutions Limited",
     stack: "Next.js Sanity CMS",
     description: "A web Application platform for rigobera solutions limited.",
@@ -65,10 +65,11 @@ export const projects = [
     code: "",
   },
   {
-    id: 7,
-    name: "EMR",
-    stack: "MongoDB, Express.js, Next.js, Node.js",
-    description: "",
+    id: 9,
+    name: "Bluecrest Oil & Gas",
+    stack: "Next.js, CMS(Sanity), Prisma, Paystack, Supabase",
+    description:
+      "A web application for an oil and gas company with quotation and payment system.",
     link: "",
     code: "",
   },
