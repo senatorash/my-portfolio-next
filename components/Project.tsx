@@ -37,6 +37,8 @@ const Project = () => {
                   <Link
                     href={prj.link}
                     className="flex items-center gap-3 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaSignal />
                     <span>Live</span>
@@ -44,6 +46,8 @@ const Project = () => {
                   <Link
                     href={prj.code}
                     className="flex items-center gap-3 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaCode />
                     <span>Code</span>
