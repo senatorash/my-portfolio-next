@@ -61,8 +61,8 @@ export const projects = [
     stack: "Next.js, Tailwind CSS",
     description:
       "A website for an engineering company showcasing their services and portfolio.",
-    link: "https://profitech.com.ng",
-    code: "",
+    link: "https://www.profitech.com.ng",
+    code: "https://www.profitech.com.ng",
   },
   {
     id: 9,
@@ -70,8 +70,8 @@ export const projects = [
     stack: "Next.js, CMS(Sanity), Prisma, Paystack, Supabase",
     description:
       "A web application for an oil and gas company with quotation and payment system.",
-    link: "",
-    code: "",
+    link: "https://www.bluecrestoilandgas.com",
+    code: "https://www.bluecrestoilandgas.com",
   },
   {
     id: 6,
